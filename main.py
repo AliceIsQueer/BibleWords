@@ -12,10 +12,13 @@ sentence = input("Are your words in the bible? \n")
 
 
 with open('./bible.txt', 'r') as bible_handle:
-    bible_versets = [sentence.split() for sentence in bible_handle.readlines()[1:]]
+    bible_versets = [verset.split() for verset in bible_handle.readlines()[1:]]
     bible_words = []
     for verset in bible_versets:
-        bible_words.extend(verset)
+        bible_words.extend([word.lower() for word in verset])
+
+    print(len(bible_words)) 
+    print(bible_words[:100])
 
 
 ok = False
