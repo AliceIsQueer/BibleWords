@@ -17,9 +17,6 @@ with open('./bible.txt', 'r') as bible_handle:
     for verset in bible_versets:
         bible_words.extend([word.lower() for word in verset])
 
-    print(len(bible_words)) 
-    print(bible_words[:100])
-
 
 ok = False
 
